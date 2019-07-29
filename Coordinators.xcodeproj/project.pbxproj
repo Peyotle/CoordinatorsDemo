@@ -13,6 +13,14 @@
 		7C36EA1022CB34C200B169C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C36EA0F22CB34C200B169C6 /* Assets.xcassets */; };
 		7C36EA1322CB34C200B169C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C36EA1122CB34C200B169C6 /* LaunchScreen.storyboard */; };
 		7C36EA1E22CB34C200B169C6 /* CoordinatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C36EA1D22CB34C200B169C6 /* CoordinatorsTests.swift */; };
+		7C36EA2922CB34E700B169C6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C36EA2822CB34E700B169C6 /* Coordinator.swift */; };
+		7C36EA2B22CB356200B169C6 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C36EA2A22CB356200B169C6 /* Storyboarded.swift */; };
+		7C36EA2D22CB376F00B169C6 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C36EA2C22CB376F00B169C6 /* MainCoordinator.swift */; };
+		7C36EA3222CB3AA900B169C6 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C36EA3122CB3AA900B169C6 /* CreateAccountViewController.swift */; };
+		7CE21E1822ED6E6F009FED48 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE21E1722ED6E6F009FED48 /* LoginCoordinator.swift */; };
+		7CE9CC7222ED61BF0039B07C /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE9CC7022ED61BF0039B07C /* CommentViewController.swift */; };
+		7CE9CC7322ED61BF0039B07C /* ImageDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE9CC7122ED61BF0039B07C /* ImageDetailsViewController.swift */; };
+		7CE9CC7722ED68750039B07C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE9CC7622ED68750039B07C /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +44,14 @@
 		7C36EA1922CB34C200B169C6 /* CoordinatorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoordinatorsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C36EA1D22CB34C200B169C6 /* CoordinatorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorsTests.swift; sourceTree = "<group>"; };
 		7C36EA1F22CB34C200B169C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C36EA2822CB34E700B169C6 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		7C36EA2A22CB356200B169C6 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		7C36EA2C22CB376F00B169C6 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		7C36EA3122CB3AA900B169C6 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		7CE21E1722ED6E6F009FED48 /* LoginCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginCoordinator.swift; path = ../../../../../../../System/Volumes/Data/Users/oleg/Developer/Tugboat/Coordinators/Coordinators/Coordinators/LoginCoordinator.swift; sourceTree = "<group>"; };
+		7CE9CC7022ED61BF0039B07C /* CommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		7CE9CC7122ED61BF0039B07C /* ImageDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDetailsViewController.swift; sourceTree = "<group>"; };
+		7CE9CC7622ED68750039B07C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +93,15 @@
 		7C36EA0722CB34BF00B169C6 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				7CE9CC7822ED6BAD0039B07C /* Coordinators */,
+				7C36EA2E22CB3A8700B169C6 /* ViewControllers */,
 				7C36EA0822CB34BF00B169C6 /* AppDelegate.swift */,
 				7C36EA0A22CB34BF00B169C6 /* ViewController.swift */,
 				7C36EA0C22CB34BF00B169C6 /* Main.storyboard */,
 				7C36EA0F22CB34C200B169C6 /* Assets.xcassets */,
 				7C36EA1122CB34C200B169C6 /* LaunchScreen.storyboard */,
 				7C36EA1422CB34C200B169C6 /* Info.plist */,
+				7C36EA2A22CB356200B169C6 /* Storyboarded.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -94,6 +113,27 @@
 				7C36EA1F22CB34C200B169C6 /* Info.plist */,
 			);
 			path = CoordinatorsTests;
+			sourceTree = "<group>";
+		};
+		7C36EA2E22CB3A8700B169C6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7C36EA3122CB3AA900B169C6 /* CreateAccountViewController.swift */,
+				7CE9CC7022ED61BF0039B07C /* CommentViewController.swift */,
+				7CE9CC7122ED61BF0039B07C /* ImageDetailsViewController.swift */,
+				7CE9CC7622ED68750039B07C /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7CE9CC7822ED6BAD0039B07C /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				7CE21E1722ED6E6F009FED48 /* LoginCoordinator.swift */,
+				7C36EA2822CB34E700B169C6 /* Coordinator.swift */,
+				7C36EA2C22CB376F00B169C6 /* MainCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +237,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CE9CC7722ED68750039B07C /* LoginViewController.swift in Sources */,
+				7CE9CC7222ED61BF0039B07C /* CommentViewController.swift in Sources */,
+				7CE21E1822ED6E6F009FED48 /* LoginCoordinator.swift in Sources */,
+				7C36EA3222CB3AA900B169C6 /* CreateAccountViewController.swift in Sources */,
 				7C36EA0B22CB34BF00B169C6 /* ViewController.swift in Sources */,
 				7C36EA0922CB34BF00B169C6 /* AppDelegate.swift in Sources */,
+				7C36EA2922CB34E700B169C6 /* Coordinator.swift in Sources */,
+				7C36EA2D22CB376F00B169C6 /* MainCoordinator.swift in Sources */,
+				7CE9CC7322ED61BF0039B07C /* ImageDetailsViewController.swift in Sources */,
+				7C36EA2B22CB356200B169C6 /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
