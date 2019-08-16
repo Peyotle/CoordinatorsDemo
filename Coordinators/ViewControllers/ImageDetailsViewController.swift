@@ -4,9 +4,9 @@
 import UIKit
 
 class ImageDetailsViewController: UIViewController, Storyboarded {
-    weak var coordinator: MainCoordinator?
     var imageName: String?
-    
+    var commentTappedAction: (() -> Void)?
+
     @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
@@ -21,6 +21,6 @@ class ImageDetailsViewController: UIViewController, Storyboarded {
     }
     
     @IBAction func commentTapped(_ sender: Any) {
-        coordinator?.comment()
+        commentTappedAction?()
     }
 }

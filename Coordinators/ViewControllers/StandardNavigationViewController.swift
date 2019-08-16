@@ -5,18 +5,26 @@ import UIKit
 
 class StandardNavigationViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    let imageNames = [
+        "sunrise",
+        "cloud.sun"
+    ]
+    
+    func didSelectItem(withIndex index: Int) {
+        let imageName = imageNames[index]
+        let imageDetailsViewController = ImageDetailsViewController.instantiate()
+        imageDetailsViewController.imageName = imageName
+        
+        self.navigationController?.pushViewController(imageDetailsViewController, animated: true)
     }
     
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let viewController = segue.destination as? ImageDetailsViewController {
-            viewController.imageName = "imageName"
+
+        if let viewController = segue.destination as? CallbackViewController {
+            viewController.imageTappedAction = { [weak self] imageName in
+                // Do your stuff with the image selected in the child view controller
+            }
         }
     }
 }

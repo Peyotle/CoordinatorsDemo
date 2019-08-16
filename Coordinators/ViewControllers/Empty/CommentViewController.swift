@@ -3,16 +3,12 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, Storyboarded {
-    weak var coordinator: LoginCoordinator?
-
+class CommentViewController: UIViewController, Storyboarded {
+    weak var coordinator: MainCoordinator?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
-
-    @IBAction func createAccount(_ sender: Any) {
-        coordinator?.createAccount()
     }
 }

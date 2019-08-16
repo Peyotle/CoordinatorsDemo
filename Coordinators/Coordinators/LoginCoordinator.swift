@@ -17,4 +17,10 @@ class LoginCoordinator: Coordinator {
                vc.coordinator = self
                navigationController.pushViewController(vc, animated: true)
     }
+    
+    func createAccount() {
+        let vc = CreateAccountViewController.instantiate()
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+    }
 }

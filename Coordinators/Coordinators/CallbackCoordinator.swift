@@ -20,10 +20,8 @@ class CallbackCoordinator: Coordinator {
     }
     
     func showImageDetails(imageName: String) {
-            let vc = ImageDetailsViewController.instantiate()
-            vc.imageName = imageName
-            navigationController.pushViewController(vc, animated: true)
-        }
-    
-
+        let vc = ImageDetailsViewController.instantiate()
+        vc.imageName = imageName
+        navigationController.pushViewController(vc, animated: true)
+    }
 }

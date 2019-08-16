@@ -3,14 +3,18 @@
 
 import UIKit
 
-class CallbackViewController: UIViewController, Storyboarded {
+protocol ImageSelecting {
+    var imageTappedAction: ((String) -> Void)? { get set }
+}
+
+class CallbackViewController: UIViewController, Storyboarded, ImageSelecting {
     
     var imageTappedAction: ((String) -> Void)?
     
     let imageNames = [
-            "sunrise",
-            "cloud.sun"
-        ]
+        "sunrise",
+        "cloud.sun"
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,15 +25,4 @@ class CallbackViewController: UIViewController, Storyboarded {
         let imageName = imageNames[sender.tag]
         imageTappedAction?(imageName)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
