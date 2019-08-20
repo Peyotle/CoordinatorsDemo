@@ -4,6 +4,7 @@
 import UIKit
 
 class LoginCoordinator: Coordinator {
+    var completedAction: (() -> Void)?
     var childCoordinators = [Coordinator]()
     
     var navigationController: UINavigationController
@@ -21,7 +22,7 @@ class LoginCoordinator: Coordinator {
         let vc = LoginViewController.instantiate()
         vc.loginPressedAction = { [weak self] in
             self?.modalNavigationController?.dismiss(animated: true) {
-            
+                self?.completedAction?()
             }
         }
         vc.forgotPasswordAction = forgotPassword

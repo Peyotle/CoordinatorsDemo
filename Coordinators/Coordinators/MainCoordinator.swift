@@ -27,6 +27,9 @@ class MainCoordinator: NSObject, Coordinator {
     typealias LogInCompletion = (Any) -> Void
     func showLogIn(completion: LogInCompletion) {
         let child = LoginCoordinator(navigationController: navigationController)
+        child.completedAction = { [weak self] in
+            self?.childDidFinish(child)
+        }
         childCoordinators.append(child)
         child.start()
     }
