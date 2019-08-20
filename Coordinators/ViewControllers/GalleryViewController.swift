@@ -5,10 +5,6 @@ import UIKit
 
 class GalleryViewController: UICollectionViewController, Storyboarded {
     var colorSelectedAction: ((String) -> Void)?
-    let imageNames = [
-        "sunrise",
-        "cloud.sun"
-    ]
     
     let cellColors: [UIColor] = [
         .red,
@@ -38,10 +34,5 @@ class GalleryViewController: UICollectionViewController, Storyboarded {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let colorName = cellColors[indexPath.item].htmlRGBColor
         colorSelectedAction?(colorName)
-    }
-    
-    @IBAction func imageTapped(_ sender: UIButton) {
-        let imageName = imageNames[sender.tag]
-        colorSelectedAction?(imageName)
     }
 }

@@ -4,7 +4,8 @@
 import UIKit
 
 class LoginViewController: UIViewController, Storyboarded {
-    weak var coordinator: LoginCoordinator?
+    var loginPressedAction: (() -> Void)?
+    var forgotPasswordAction: (() -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -12,7 +13,11 @@ class LoginViewController: UIViewController, Storyboarded {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func createAccount(_ sender: Any) {
-        coordinator?.createAccount()
+    @IBAction func logInPressed(_ sender: UIButton) {
+        loginPressedAction?()
+    }
+    
+    @IBAction func forgotPasswordPressed(_ sender: UIButton) {
+        forgotPasswordAction?()
     }
 }

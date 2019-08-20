@@ -3,9 +3,7 @@
 
 import UIKit
 
-class CreateAccountViewController: UIViewController, Storyboarded {
-    weak var coordinator: LoginCoordinator?
-    
+class ForgotPasswordViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
 

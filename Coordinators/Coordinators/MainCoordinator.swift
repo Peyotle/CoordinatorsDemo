@@ -5,7 +5,7 @@ import UIKit
 
 class MainCoordinator: NSObject, Coordinator {
     var childCoordinators = [Coordinator]()
-    private var loggedIn = true
+    private var loggedIn = false
     
     var navigationController: UINavigationController
     
@@ -14,11 +14,7 @@ class MainCoordinator: NSObject, Coordinator {
     }
     
     func start() {
-        if loggedIn {
-            showGallery()
-        } else {
-            showLogIn()
-        }
+        showGallery()
     }
     
     func showGallery() {
@@ -28,13 +24,20 @@ class MainCoordinator: NSObject, Coordinator {
         navigationController.delegate = self
     }
     
-    func showLogIn() {
+    typealias LogInCompletion = (Any) -> Void
+    func showLogIn(completion: LogInCompletion) {
         let child = LoginCoordinator(navigationController: navigationController)
         childCoordinators.append(child)
         child.start()
     }
     
     func showColorDetails(hexRGBColor: String) {
+        guard loggedIn else {
+            showLogIn(completion: { _ in
+                showColorDetails(hexRGBColor: hexRGBColor)
+            })
+            return
+        }
         let vc = ColorDetailsViewController.instantiate()
         vc.hexRGBColorName = hexRGBColor
         navigationController.pushViewController(vc, animated: true)
@@ -71,22 +74,7 @@ extension MainCoordinator: UINavigationControllerDelegate {
         // We’re still here – it means we’re popping the view controller, so we can check whether it’s a buy view controller
         if let loginViewController = fromViewController as? LoginViewController {
             // We're popping a buy view controller; end its coordinator
-            childDidFinish(loginViewController.coordinator)
+//            childDidFinish(loginViewController.coordinator)
         }
-    }
-}
-
-
-// MARK: - Protocols
-
-protocol ShowingImageDetails: AnyObject {
-    func showImageDetails(imageName: String)
-}
-
-extension MainCoordinator: ShowingImageDetails {
-    func showImageDetails(imageName: String) {
-        let vc = ImageDetailsViewController.instantiate()
-        vc.imageName = imageName
-        navigationController.pushViewController(vc, animated: true)
     }
 }

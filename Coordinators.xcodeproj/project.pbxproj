@@ -15,17 +15,12 @@
 		7C36EA2922CB34E700B169C6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C36EA2822CB34E700B169C6 /* Coordinator.swift */; };
 		7C36EA2B22CB356200B169C6 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C36EA2A22CB356200B169C6 /* Storyboarded.swift */; };
 		7C36EA2D22CB376F00B169C6 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C36EA2C22CB376F00B169C6 /* MainCoordinator.swift */; };
-		7C36EA3222CB3AA900B169C6 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C36EA3122CB3AA900B169C6 /* CreateAccountViewController.swift */; };
-		7CE63D3622EF06790094C87B /* StandardNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE63D3522EF06790094C87B /* StandardNavigationViewController.swift */; };
-		7CE63D3A22EF097D0094C87B /* CallbackCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE63D3922EF097D0094C87B /* CallbackCoordinator.swift */; };
-		7CE9CC7222ED61BF0039B07C /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE9CC7022ED61BF0039B07C /* CommentViewController.swift */; };
-		7CE9CC7322ED61BF0039B07C /* ImageDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE9CC7122ED61BF0039B07C /* ImageDetailsViewController.swift */; };
+		7C36EA3222CB3AA900B169C6 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C36EA3122CB3AA900B169C6 /* ForgotPasswordViewController.swift */; };
 		7CE9CC7722ED68750039B07C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE9CC7622ED68750039B07C /* LoginViewController.swift */; };
 		D485EC0023065292000201EB /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D485EBFF23065292000201EB /* GalleryViewController.swift */; };
 		D485EC03230657A9000201EB /* UIColor+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D485EC02230657A9000201EB /* UIColor+String.swift */; };
 		D485EC052306638F000201EB /* ColorDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D485EC042306638F000201EB /* ColorDetailsViewController.swift */; };
 		D4C1D71622EFC2BE0066D153 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C1D71522EFC2BE0066D153 /* LoginCoordinator.swift */; };
-		D4C1D71822EFCEBB0066D153 /* CallbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C1D71722EFCEBB0066D153 /* CallbackViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,17 +46,12 @@
 		7C36EA2822CB34E700B169C6 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		7C36EA2A22CB356200B169C6 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		7C36EA2C22CB376F00B169C6 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
-		7C36EA3122CB3AA900B169C6 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
-		7CE63D3522EF06790094C87B /* StandardNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardNavigationViewController.swift; sourceTree = "<group>"; };
-		7CE63D3922EF097D0094C87B /* CallbackCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallbackCoordinator.swift; sourceTree = "<group>"; };
-		7CE9CC7022ED61BF0039B07C /* CommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
-		7CE9CC7122ED61BF0039B07C /* ImageDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDetailsViewController.swift; sourceTree = "<group>"; };
+		7C36EA3122CB3AA900B169C6 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		7CE9CC7622ED68750039B07C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D485EBFF23065292000201EB /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		D485EC02230657A9000201EB /* UIColor+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+String.swift"; sourceTree = "<group>"; };
 		D485EC042306638F000201EB /* ColorDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDetailsViewController.swift; sourceTree = "<group>"; };
 		D4C1D71522EFC2BE0066D153 /* LoginCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
-		D4C1D71722EFCEBB0066D153 /* CallbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallbackViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,10 +120,7 @@
 			children = (
 				D485EBFF23065292000201EB /* GalleryViewController.swift */,
 				D4E2DEE322EFD1BD00774046 /* Empty */,
-				D4C1D71722EFCEBB0066D153 /* CallbackViewController.swift */,
-				7CE9CC7122ED61BF0039B07C /* ImageDetailsViewController.swift */,
 				7CE9CC7622ED68750039B07C /* LoginViewController.swift */,
-				7CE63D3522EF06790094C87B /* StandardNavigationViewController.swift */,
 				D485EC042306638F000201EB /* ColorDetailsViewController.swift */,
 			);
 			path = ViewControllers;
@@ -145,7 +132,6 @@
 				D4C1D71522EFC2BE0066D153 /* LoginCoordinator.swift */,
 				7C36EA2822CB34E700B169C6 /* Coordinator.swift */,
 				7C36EA2C22CB376F00B169C6 /* MainCoordinator.swift */,
-				7CE63D3922EF097D0094C87B /* CallbackCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -161,8 +147,7 @@
 		D4E2DEE322EFD1BD00774046 /* Empty */ = {
 			isa = PBXGroup;
 			children = (
-				7CE9CC7022ED61BF0039B07C /* CommentViewController.swift */,
-				7C36EA3122CB3AA900B169C6 /* CreateAccountViewController.swift */,
+				7C36EA3122CB3AA900B169C6 /* ForgotPasswordViewController.swift */,
 			);
 			path = Empty;
 			sourceTree = "<group>";
@@ -269,19 +254,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CE9CC7722ED68750039B07C /* LoginViewController.swift in Sources */,
-				7CE9CC7222ED61BF0039B07C /* CommentViewController.swift in Sources */,
-				7CE63D3622EF06790094C87B /* StandardNavigationViewController.swift in Sources */,
-				7C36EA3222CB3AA900B169C6 /* CreateAccountViewController.swift in Sources */,
+				7C36EA3222CB3AA900B169C6 /* ForgotPasswordViewController.swift in Sources */,
 				D485EC03230657A9000201EB /* UIColor+String.swift in Sources */,
 				D485EC052306638F000201EB /* ColorDetailsViewController.swift in Sources */,
 				D4C1D71622EFC2BE0066D153 /* LoginCoordinator.swift in Sources */,
 				D485EC0023065292000201EB /* GalleryViewController.swift in Sources */,
 				7C36EA0922CB34BF00B169C6 /* AppDelegate.swift in Sources */,
-				D4C1D71822EFCEBB0066D153 /* CallbackViewController.swift in Sources */,
 				7C36EA2922CB34E700B169C6 /* Coordinator.swift in Sources */,
 				7C36EA2D22CB376F00B169C6 /* MainCoordinator.swift in Sources */,
-				7CE63D3A22EF097D0094C87B /* CallbackCoordinator.swift in Sources */,
-				7CE9CC7322ED61BF0039B07C /* ImageDetailsViewController.swift in Sources */,
 				7C36EA2B22CB356200B169C6 /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
