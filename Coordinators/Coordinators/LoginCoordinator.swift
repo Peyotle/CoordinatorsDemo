@@ -41,3 +41,9 @@ class LoginCoordinator: Coordinator {
         modalNavigationController?.pushViewController(vc, animated: true)
     }
 }
+
+extension LoginCoordinator {
+    func navigateTo(path: String) -> Coordinator? {
+        return nil
+    }
+}

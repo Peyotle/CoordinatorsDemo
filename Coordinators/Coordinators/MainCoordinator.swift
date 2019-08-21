@@ -17,21 +17,26 @@ class MainCoordinator: NSObject, Coordinator {
         showGallery()
     }
     
-    func showGallery() {
+    @discardableResult
+    func showGallery() -> Coordinator? {
         let vc = GalleryViewController.instantiate()
         vc.colorSelectedAction = self.showColorDetails
         navigationController.pushViewController(vc, animated: false)
         navigationController.delegate = self
+        return self
     }
     
     typealias LogInCompletion = (Any) -> Void
-    func showLogIn(completion: LogInCompletion) {
+    
+    @discardableResult
+    func showLogIn(completion: LogInCompletion) -> Coordinator? {
         let child = LoginCoordinator(navigationController: navigationController)
         child.completedAction = { [weak self] in
             self?.childDidFinish(child)
         }
         childCoordinators.append(child)
         child.start()
+        return child
     }
     
     func showColorDetails(hexRGBColor: String) {
@@ -53,6 +58,21 @@ class MainCoordinator: NSObject, Coordinator {
                 childCoordinators.remove(at: index)
                 break
             }
+        }
+    }
+}
+
+extension MainCoordinator {
+    func navigateTo(path: String) -> Coordinator? {
+        switch path {
+        case "gallery":
+            return showGallery()
+        case "login":
+            return showLogIn(completion: { _ in
+                showGallery()
+            })
+        default:
+            return nil
         }
     }
 }
