@@ -21,6 +21,9 @@ class MainCoordinator: NSObject, Coordinator {
     func showGallery() -> Coordinator? {
         let vc = GalleryViewController.instantiate()
         vc.colorSelectedAction = self.showColorDetails
+        vc.forgotPasswordAction = { [weak self] path in
+            self?.navigateTo(path: path)
+        }
         navigationController.pushViewController(vc, animated: false)
         navigationController.delegate = self
         return self
@@ -63,6 +66,8 @@ class MainCoordinator: NSObject, Coordinator {
 }
 
 extension MainCoordinator {
+    
+    @discardableResult
     func navigateTo(path: String) -> Coordinator? {
         switch path {
         case "gallery":
