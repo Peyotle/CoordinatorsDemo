@@ -5,7 +5,6 @@ import UIKit
 
 class GalleryViewController: UICollectionViewController, Storyboarded {
     var colorSelectedAction: ((String) -> Void)?
-    var forgotPasswordAction: ((String) -> Void)?
     
     let cellColors: [UIColor] = [
         .red,
@@ -15,16 +14,7 @@ class GalleryViewController: UICollectionViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let forgotItem = UIBarButtonItem(barButtonSystemItem: .fastForward,
-        target: self,
-        action: #selector(self.forgotPassword))
         
-        self.navigationItem.setRightBarButton(forgotItem, animated: false)
-    }
-
-    // MARK: Path demonstration
-    @objc func forgotPassword() {
-        forgotPasswordAction?("login/forgot")
     }
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {

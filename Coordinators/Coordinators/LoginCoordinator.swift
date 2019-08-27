@@ -27,15 +27,15 @@ class LoginCoordinator: Coordinator {
         }
         vc.forgotPasswordAction = forgotPassword
         modalNavigationController = UINavigationController(rootViewController: vc)
-        if #available(iOS 13.0, *) {
-            modalNavigationController?.modalPresentationStyle = .automatic
-        } else {
+//        if #available(iOS 13.0, *) {
+//            modalNavigationController?.modalPresentationStyle = .automatic
+//        } else {
             modalNavigationController?.modalPresentationStyle = .fullScreen
-        }
+//        }
         navigationController.topViewController?.present(modalNavigationController!,
                                                         animated: true)
     }
-    
+
     func forgotPassword() {
         let vc = ForgotPasswordViewController.instantiate()
         modalNavigationController?.pushViewController(vc, animated: true)

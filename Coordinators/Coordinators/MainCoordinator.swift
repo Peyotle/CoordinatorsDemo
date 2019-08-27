@@ -3,9 +3,13 @@
 
 import UIKit
 
+class AuthManager {
+    var loggedIn = false
+}
+
 class MainCoordinator: NSObject, Coordinator {
     var childCoordinators = [Coordinator]()
-    private var loggedIn = false
+    private var authManager = AuthManager()
     
     var navigationController: UINavigationController
     
@@ -21,9 +25,7 @@ class MainCoordinator: NSObject, Coordinator {
     func showGallery() -> Coordinator? {
         let vc = GalleryViewController.instantiate()
         vc.colorSelectedAction = self.showColorDetails
-        vc.forgotPasswordAction = { [weak self] path in
-            self?.navigateTo(path: path)
-        }
+        
         navigationController.pushViewController(vc, animated: false)
         navigationController.delegate = self
         return self
@@ -33,17 +35,18 @@ class MainCoordinator: NSObject, Coordinator {
     
     @discardableResult
     func showLogIn(completion: LogInCompletion) -> Coordinator? {
-        let child = LoginCoordinator(navigationController: navigationController)
-        child.completedAction = { [weak self] in
-            self?.childDidFinish(child)
+        let loginCoordinator = LoginCoordinator(navigationController: navigationController)
+        loginCoordinator.completedAction = { [weak self] in
+            self?.childDidFinish(loginCoordinator)
+            self?.authManager.loggedIn = true
         }
-        childCoordinators.append(child)
-        child.start()
-        return child
+        childCoordinators.append(loginCoordinator)
+        loginCoordinator.start()
+        return loginCoordinator
     }
     
     func showColorDetails(hexRGBColor: String) {
-        guard loggedIn else {
+        guard authManager.loggedIn else {
             showLogIn(completion: { _ in
                 showColorDetails(hexRGBColor: hexRGBColor)
             })
@@ -61,23 +64,6 @@ class MainCoordinator: NSObject, Coordinator {
                 childCoordinators.remove(at: index)
                 break
             }
-        }
-    }
-}
-
-extension MainCoordinator {
-    
-    @discardableResult
-    func navigateTo(path: String) -> Coordinator? {
-        switch path {
-        case "gallery":
-            return showGallery()
-        case "login":
-            return showLogIn(completion: { _ in
-                showGallery()
-            })
-        default:
-            return nil
         }
     }
 }
@@ -103,6 +89,23 @@ extension MainCoordinator: UINavigationControllerDelegate {
         if let loginViewController = fromViewController as? LoginViewController {
             // We're popping a buy view controller; end its coordinator
 //            childDidFinish(loginViewController.coordinator)
+        }
+    }
+}
+
+extension MainCoordinator {
+    
+    @discardableResult
+    func navigateTo(path: String) -> Coordinator? {
+        switch path {
+        case "gallery":
+            return showGallery()
+        case "login":
+            return showLogIn(completion: { _ in
+                showGallery()
+            })
+        default:
+            return nil
         }
     }
 }
